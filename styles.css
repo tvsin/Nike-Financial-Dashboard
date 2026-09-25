@@ -95,9 +95,34 @@ td:last-child { color: var(--muted); max-width: 260px; }
 .source-card a { text-decoration: none; padding: 12px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
 .source-card a:hover { text-decoration: underline; }
 .source-note { margin-top: 10px; font-size: 12px; color: var(--muted); }
-.creator { padding: 90px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: end; }
-.creator p { color: var(--muted); }
-.creator-note { color: var(--muted); max-width: 500px; justify-self: end; }
+.about-section { scroll-margin-top: 60px; }
+.about-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  padding: 42px;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 56px;
+  align-items: center;
+}
+.about-role { margin: 12px 0 0; color: var(--muted); font-weight: 700; }
+.about-text { max-width: 720px; margin: 22px 0 0; color: var(--muted); font-size: 16px; }
+.about-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 26px; }
+.about-highlights { display: flex; flex-wrap: wrap; gap: 10px; align-content: flex-start; }
+.about-highlights span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
 footer { border-top: 1px solid var(--border); }
 .footer-wrap { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 20px; color: var(--muted); font-size: 12px; }
 @media (max-width: 900px) {
@@ -108,13 +133,13 @@ footer { border-top: 1px solid var(--border); }
   .metric-tabs { justify-content: flex-start; }
   .chart-summary { text-align: left; }
   .insight-grid { grid-template-columns: 1fr 1fr; }
-  .methodology-grid, .creator { grid-template-columns: 1fr; gap: 30px; }
-  .creator-note { justify-self: start; }
+  .methodology-grid, .about-card { grid-template-columns: 1fr; gap: 30px; }
 }
 @media (max-width: 560px) {
   .container { width: min(100% - 24px, 1160px); }
   .kpi-grid, .insight-grid { grid-template-columns: 1fr; }
   .hero-card-value { font-size: 52px; }
   .chart-meta { flex-direction: column; }
+  .about-card { padding: 26px; }
   .footer-wrap { flex-direction: column; justify-content: center; align-items: flex-start; padding: 20px 0; }
 }
