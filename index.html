@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nike financial performance dashboard built by Tosin Thompson using SEC 10-K data." />
+  <title>Nike Financial Performance Dashboard | Tosin Thompson</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Nike financial dashboard home">
+        <span class="brand-mark">NKE</span>
+        <span>Financial Dashboard</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#performance">Performance</a>
+        <a href="#insights">Insights</a>
+        <a href="#ratios">Ratios</a>
+        <a href="#methodology">Methodology</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">Independent Finance Project · Updated FY2026</p>
+        <h1>Nike Financial Performance Dashboard</h1>
+        <p class="hero-subtitle">
+          A five-year view of Nike's revenue, profitability, margins, and cash generation using reported data from SEC Form 10-K filings.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#performance">Explore the analysis</a>
+          <a class="button secondary" href="#methodology">View sources</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Latest fiscal year snapshot">
+        <div class="hero-card-label">FY2026 snapshot</div>
+        <div class="hero-card-value">$46.4B</div>
+        <div class="hero-card-caption">Revenue</div>
+        <div class="hero-card-divider"></div>
+        <div class="mini-grid">
+          <div><strong>$3.11B</strong><span>Net income</span></div>
+          <div><strong>42.9%</strong><span>Gross margin</span></div>
+          <div><strong>$2.87B</strong><span>Operating cash flow</span></div>
+          <div><strong>$2.10</strong><span>Diluted EPS</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="container kpi-grid" aria-label="Key performance indicators">
+      <article class="kpi-card">
+        <div class="kpi-label">Revenue</div>
+        <div class="kpi-row"><span class="kpi-value">$46.40B</span><span class="delta positive">+0.2%</span></div>
+        <p>FY2026 vs. FY2025</p>
+      </article>
+      <article class="kpi-card">
+        <div class="kpi-label">Net income</div>
+        <div class="kpi-row"><span class="kpi-value">$3.11B</span><span class="delta negative">−3.4%</span></div>
+        <p>FY2026 vs. FY2025</p>
+      </article>
+      <article class="kpi-card">
+        <div class="kpi-label">Gross margin</div>
+        <div class="kpi-row"><span class="kpi-value">42.9%</span><span class="delta positive">+20 bps</span></div>
+        <p>FY2026 vs. FY2025</p>
+      </article>
+      <article class="kpi-card">
+        <div class="kpi-label">Operating cash flow</div>
+        <div class="kpi-row"><span class="kpi-value">$2.87B</span><span class="delta negative">−22.4%</span></div>
+        <p>FY2026 vs. FY2025</p>
+      </article>
+    </section>
+
+    <section id="performance" class="section container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Five-year performance</p>
+          <h2>Financial trend explorer</h2>
+        </div>
+        <div class="metric-tabs" role="tablist" aria-label="Select metric to chart">
+          <button class="metric-tab active" data-metric="revenue" role="tab" aria-selected="true">Revenue</button>
+          <button class="metric-tab" data-metric="netIncome" role="tab" aria-selected="false">Net income</button>
+          <button class="metric-tab" data-metric="grossMargin" role="tab" aria-selected="false">Gross margin</button>
+          <button class="metric-tab" data-metric="operatingCashFlow" role="tab" aria-selected="false">Operating cash flow</button>
+        </div>
+      </div>
+
+      <article class="chart-card">
+        <div class="chart-meta">
+          <div>
+            <span id="chartTitle" class="chart-title">Revenue</span>
+            <span id="chartUnit" class="chart-unit">USD billions</span>
+          </div>
+          <div id="chartSummary" class="chart-summary">Revenue stabilized in FY2026 after a sharp decline in FY2025.</div>
+        </div>
+        <div class="chart-wrap">
+          <svg id="lineChart" viewBox="0 0 860 360" role="img" aria-labelledby="chartTitle chartDescription">
+            <desc id="chartDescription">Interactive five-year Nike financial metric chart.</desc>
+          </svg>
+        </div>
+        <div id="chartLegend" class="chart-legend"></div>
+      </article>
+    </section>
+
+    <section id="insights" class="section alt-section">
+      <div class="container">
+        <div class="section-heading simple">
+          <div>
+            <p class="eyebrow">Analyst takeaways</p>
+            <h2>What the numbers are saying</h2>
+          </div>
+        </div>
+        <div class="insight-grid">
+          <article class="insight-card">
+            <span class="insight-number">01</span>
+            <h3>Top-line stabilization</h3>
+            <p>Revenue was essentially flat in FY2026 at $46.4B after falling roughly 10% in FY2025. That suggests the decline paused, but the business remains well below the FY2024 revenue peak.</p>
+          </article>
+          <article class="insight-card">
+            <span class="insight-number">02</span>
+            <h3>Margin recovery is modest</h3>
+            <p>Gross margin improved to 42.9% in FY2026 from 42.7% in FY2025, but it remains 170 basis points below FY2022's 46.0% level.</p>
+          </article>
+          <article class="insight-card">
+            <span class="insight-number">03</span>
+            <h3>Cash generation weakened</h3>
+            <p>Operating cash flow fell from $7.43B in FY2024 to $2.87B in FY2026, a decline of roughly 61%. That is the most important deterioration in the five-year view.</p>
+          </article>
+          <article class="insight-card">
+            <span class="insight-number">04</span>
+            <h3>Profitability remains under pressure</h3>
+            <p>Net income declined from $5.70B in FY2024 to $3.11B in FY2026. FY2026 net margin was approximately 6.7%, versus 11.1% in FY2024.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ratios" class="section container">
+      <div class="section-heading simple">
+        <div>
+          <p class="eyebrow">Ratio analysis</p>
+          <h2>Selected profitability measures</h2>
+        </div>
+      </div>
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>FY2022</th>
+              <th>FY2023</th>
+              <th>FY2024</th>
+              <th>FY2025</th>
+              <th>FY2026</th>
+              <th>Read-through</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gross margin</td>
+              <td>46.0%</td><td>43.5%</td><td>44.6%</td><td>42.7%</td><td>42.9%</td>
+              <td>Some FY2026 recovery, still below earlier levels.</td>
+            </tr>
+            <tr>
+              <td>Net margin</td>
+              <td>12.9%</td><td>9.9%</td><td>11.1%</td><td>7.0%</td><td>6.7%</td>
+              <td>Profit conversion weakened materially after FY2024.</td>
+            </tr>
+            <tr>
+              <td>Operating cash flow / revenue</td>
+              <td>11.1%</td><td>11.4%</td><td>14.5%</td><td>8.0%</td><td>6.2%</td>
+              <td>Cash generation has fallen faster than revenue.</td>
+            </tr>
+            <tr>
+              <td>Diluted EPS</td>
+              <td>$3.75</td><td>$3.23</td><td>$3.73</td><td>$2.16</td><td>$2.10</td>
+              <td>Earnings per share remain well below FY2024.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="methodology" class="section alt-section">
+      <div class="container methodology-grid">
+        <div>
+          <p class="eyebrow">Methodology</p>
+          <h2>Built from reported financial statements</h2>
+          <p class="method-copy">
+            Figures are reported in Nike's fiscal years ending May 31 and are shown in U.S. dollars. Revenue, net income, gross margin, diluted EPS, and operating cash flow come from Nike's SEC Form 10-K filings. Calculated ratios such as net margin and operating cash flow as a percentage of revenue are derived from those reported figures.
+          </p>
+          <p class="method-copy muted">
+            This is an educational portfolio project and not investment advice. All analysis is the author's interpretation of public filings.
+          </p>
+        </div>
+        <div class="source-card">
+          <h3>Primary sources</h3>
+          <a href="https://www.sec.gov/Archives/edgar/data/320187/000032018726000088/nke-20260531.htm" target="_blank" rel="noreferrer">Nike FY2026 Form 10-K ↗</a>
+          <a href="https://www.sec.gov/Archives/edgar/data/320187/000032018725000047/nke-20250531.htm" target="_blank" rel="noreferrer">Nike FY2025 Form 10-K ↗</a>
+          <a href="https://www.sec.gov/Archives/edgar/data/320187/000032018724000044/nke-20240531.htm" target="_blank" rel="noreferrer">Nike FY2024 Form 10-K ↗</a>
+          <div class="source-note">Data through fiscal year ended May 31, 2026.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="creator container">
+      <div>
+        <p class="eyebrow">Created by</p>
+        <h2>Tosin Thompson</h2>
+        <p>Business Administration · Finance · UC Riverside</p>
+      </div>
+      <div class="creator-note">Designed to demonstrate financial statement analysis, ratio analysis, data visualization, and business communication.</div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-wrap">
+      <span>Independent financial analysis project</span>
+      <span>Data source: Nike SEC filings</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
